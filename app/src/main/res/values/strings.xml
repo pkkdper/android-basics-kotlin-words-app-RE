@@ -6,6 +6,6 @@
     <string name="fine_15">Fine = 15%</string>
     <string name="round_up_tip">Round up tip?</string>
     <string name="calculate_tip">Calculate tip</string>
-    <string name="tip_amount">Tip amount</string>
+    <string name="tip_amount">Tip amount: %s</string>
     <string name="cost_of_service">Cost of Service</string>
 </resources>

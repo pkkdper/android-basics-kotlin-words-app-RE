@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><!DOCTYPE androidx.constraintlayout.widget.ConstraintLayout [<!ELEMENT androidx.constraintlayout.widget.ConstraintLayout (EditText|TextView|RadioGroup|Switch|Button)*><!ATTLIST androidx.constraintlayout.widget.ConstraintLayoutxmlns:android CDATA #REQUIREDxmlns:app CDATA #REQUIREDxmlns:tools CDATA #REQUIREDandroid:layout_width CDATA #REQUIREDandroid:layout_height CDATA #REQUIREDandroid:padding CDATA #REQUIREDtools:context CDATA #REQUIRED><!ELEMENT EditText (#PCDATA)><!ATTLIST EditTextandroid:id CDATA #REQUIREDandroid:layout_width CDATA #REQUIREDandroid:layout_height CDATA #REQUIREDandroid:inputType CDATA #REQUIREDandroid:hint CDATA #REQUIREDapp:layout_constraintStart_toStartOf CDATA #REQUIREDapp:layout_constraintTop_toTopOf CDATA #REQUIRED><!ELEMENT TextView (#PCDATA)><!ATTLIST TextViewandroid:id CDATA #REQUIREDandroid:layout_height CDATA #REQUIREDandroid:layout_width CDATA #REQUIREDandroid:text CDATA #REQUIREDapp:layout_constraintEnd_toEndOf CDATA #IMPLIEDapp:layout_constraintStart_toStartOf CDATA #IMPLIEDapp:layout_constraintTop_toBottomOf CDATA #REQUIRED><!ELEMENT RadioGroup (RadioButton)*><!ATTLIST RadioGroupandroid:id CDATA #REQUIREDandroid:layout_width CDATA #REQUIREDandroid:layout_height CDATA #REQUIREDandroid:orientation CDATA #REQUIREDandroid:checkedButton CDATA #REQUIREDapp:layout_constraintStart_toStartOf CDATA #REQUIREDapp:layout_constraintTop_toBottomOf CDATA #REQUIRED><!ELEMENT RadioButton (#PCDATA)><!ATTLIST RadioButtonandroid:id CDATA #REQUIREDandroid:layout_height CDATA #REQUIREDandroid:layout_width CDATA #REQUIREDandroid:text CDATA #REQUIRED><!ELEMENT Switch (#PCDATA)><!ATTLIST Switchandroid:id CDATA #REQUIREDandroid:layout_height CDATA #REQUIREDandroid:layout_width CDATA #REQUIREDandroid:text CDATA #REQUIREDandroid:checked CDATA #REQUIREDapp:layout_constraintEnd_toEndOf CDATA #REQUIREDapp:layout_constraintStart_toStartOf CDATA #REQUIREDapp:layout_constraintTop_toBottomOf CDATA #REQUIRED><!ELEMENT Button (#PCDATA)><!ATTLIST Buttonandroid:id CDATA #REQUIREDandroid:layout_width CDATA #REQUIREDandroid:layout_height CDATA #REQUIREDandroid:text CDATA #REQUIREDapp:layout_constraintStart_toStartOf CDATA #REQUIREDapp:layout_constraintTop_toBottomOf CDATA #REQUIREDapp:layout_constraintEnd_toEndOf CDATA #REQUIRED>]>
+<?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -63,7 +63,7 @@
         app:layout_constraintTop_toBottomOf="@id/tip_options" />
 
     <Button
-        android:id="@+id/calculate"
+        android:id="@+id/calculate_button"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/calculate_tip"
@@ -75,7 +75,7 @@
         android:id="@+id/tip_amount"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/tip_amount"
+        tools:text="Tip Amount: $10"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/calculate" />
+        app:layout_constraintTop_toBottomOf="@+id/calculate_button" />
 </androidx.constraintlayout.widget.ConstraintLayout>
