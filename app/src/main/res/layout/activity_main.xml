@@ -19,7 +19,9 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_height="wrap_content"
-            android:layout_width="match_parent"/>
+            android:layout_width="match_parent"
+            android:id="@+id/cost_of_service_edit_text"
+            android:inputType="numberDecimal"/>
 </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
