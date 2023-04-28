@@ -12,7 +12,8 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="21">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
-        <item name="android:radioButtonStyle"
-        <item name="android:switchStyle"
+        <item name="radioButtonStyle">@style/Widget.Calc.CompoundButton.RadioButton</item>
+        <item name="switchStyle">@style/Widget.Calc.CompoundButton.Switch</item>
+        <item name="textInputStyle">@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox</item>
     </style>
 </resources>
