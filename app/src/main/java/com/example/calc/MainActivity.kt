@@ -7,6 +7,7 @@ import android.view.KeyEvent
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 import com.example.calc.databinding.ActivityMainBinding
+import com.google.android.material.textfield.TextInputEditText
 import java.text.NumberFormat
 import kotlin.math.ceil
 
@@ -17,6 +18,11 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         binding.calculateButton.setOnClickListener{calculateTip()}
+//        attach a key listener on the TextInputEditText widget
+        setContentView(binding.root)
+        binding.calculateButton.setOnClickListener { calculateTip() }
+        binding.costOfServiceEditText.setOnKeyListener { view, keyCode, _ -> handleKeyEvent(view, keyCode)
+        }
     }
     private fun calculateTip() {
         val stringInTextField = binding.costOfServiceEditText.text.toString()
