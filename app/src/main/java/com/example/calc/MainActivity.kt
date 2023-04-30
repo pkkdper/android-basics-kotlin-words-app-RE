@@ -19,8 +19,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         binding.calculateButton.setOnClickListener{calculateTip()}
 //        attach a key listener on the TextInputEditText widget
-        setContentView(binding.root)
-        binding.calculateButton.setOnClickListener { calculateTip() }
         binding.costOfServiceEditText.setOnKeyListener { view, keyCode, _ -> handleKeyEvent(view, keyCode)
         }
     }
