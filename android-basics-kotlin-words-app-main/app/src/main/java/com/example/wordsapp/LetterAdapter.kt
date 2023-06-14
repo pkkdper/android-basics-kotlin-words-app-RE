@@ -67,6 +67,7 @@ class LetterAdapter :
 
         // Assigns a [OnClickListener] to the button contained in the [ViewHolder]
         holder.button.setOnClickListener {
+            val context = holder.itemView.context
             // Create an action from WordList to DetailList
             // using the required arguments
             val action = LetterListFragmentDirections.actionLetterListFragmentToWordListFragment(letter = holder.button.text.toString())
