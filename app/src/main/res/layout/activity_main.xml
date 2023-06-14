@@ -6,9 +6,6 @@
     android:layout_height="match_parent"
     android:layout_width="match_parent">
 <androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
@@ -67,7 +64,7 @@
         android:id="@+id/tip_options"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="4dp"
         android:checkedButton="@id/option_twenty"
         android:orientation="vertical"
         app:layout_constraintStart_toStartOf="@id/service_question"
@@ -106,7 +103,7 @@
         android:id="@+id/switch_round_up"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="212dp"
         android:checked="false"
         android:text="@string/round_up_tip"
         app:layout_constraintStart_toEndOf="@id/arrow_image"
