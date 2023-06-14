@@ -15,6 +15,7 @@
  */
 package com.example.wordsapp
 
+import android.content.Intent
 import android.os.Build
 import android.view.LayoutInflater
 import android.view.View
@@ -68,6 +69,7 @@ class LetterAdapter :
         // Assigns a [OnClickListener] to the button contained in the [ViewHolder]
         holder.button.setOnClickListener {
             val context = holder.itemView.context
+            val intent = Intent(context, DetailActivity::class.java)
             // Create an action from WordList to DetailList
             // using the required arguments
             val action = LetterListFragmentDirections.actionLetterListFragmentToWordListFragment(letter = holder.button.text.toString())
