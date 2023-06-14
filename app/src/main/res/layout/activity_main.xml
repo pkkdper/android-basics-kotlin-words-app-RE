@@ -64,7 +64,8 @@
         android:id="@+id/tip_options"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
         android:checkedButton="@id/option_twenty"
         android:orientation="vertical"
         app:layout_constraintStart_toStartOf="@id/service_question"
@@ -103,7 +104,8 @@
         android:id="@+id/switch_round_up"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="212dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
         android:checked="false"
         android:text="@string/round_up_tip"
         app:layout_constraintStart_toEndOf="@id/arrow_image"
@@ -112,8 +114,9 @@
 
     <Button
         android:id="@+id/calculate_button"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="392dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="40dp"
         android:text="@string/calculate_tip"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -122,12 +125,13 @@
     <TextView
         android:id="@+id/tip_amount"
         style="@style/Widget.Calc.TextView"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        tools:text="Tip Amount: $10"
+        android:layout_width="166dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/calculate_button"
-        android:layout_marginTop="8dp"
-        />
+        tools:text="Tip Amount: $10" />
 </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
