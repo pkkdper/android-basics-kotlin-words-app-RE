@@ -63,13 +63,15 @@ class LetterAdapter :
      * Replaces the content of an existing view with new data
      */
     override fun onBindViewHolder(holder: LetterViewHolder, position: Int) {
-        val item = list.get(position)
+        val item = list[position]
         holder.button.text = item.toString()
 
         // Assigns a [OnClickListener] to the button contained in the [ViewHolder]
         holder.button.setOnClickListener {
             val context = holder.itemView.context
-            val intent = Intent(context, DetailActivity::class.java)
+            val intent = Intent(context, DetailActivity::class)
+            intent.putExtra("letter", holder.button.text.toString())
+            context.startActivity(intent)
             // Create an action from WordList to DetailList
             // using the required arguments
             val action = LetterListFragmentDirections.actionLetterListFragmentToWordListFragment(letter = holder.button.text.toString())
