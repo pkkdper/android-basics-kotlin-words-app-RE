@@ -69,7 +69,7 @@ class LetterAdapter :
         // Assigns a [OnClickListener] to the button contained in the [ViewHolder]
         holder.button.setOnClickListener {
             val context = holder.itemView.context
-            val intent = Intent(context, DetailActivity::class)
+            val intent = Intent(context, DetailActivity::class.java)
             intent.putExtra("letter", holder.button.text.toString())
             context.startActivity(intent)
             // Create an action from WordList to DetailList
