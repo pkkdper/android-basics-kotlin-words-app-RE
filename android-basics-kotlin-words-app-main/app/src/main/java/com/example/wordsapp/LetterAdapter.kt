@@ -71,7 +71,7 @@ class LetterAdapter :
             val context = holder.itemView.context
             // creating explicit intent
             val intent = Intent(context, DetailActivity::class.java)
-            intent.putExtra("letter", holder.button.text.toString())
+            intent.putExtra(DetailActivity.LETTER, holder.button.text.toString())
             context.startActivity(intent)
             // Create an action from WordList to DetailList
             // using the required arguments
