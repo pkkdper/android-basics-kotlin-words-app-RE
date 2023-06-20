@@ -24,20 +24,23 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.wordsapp.databinding.ActivityMainBinding
 
+
 /**
  * Main Activity and entry point for the app.
  */
 class MainActivity : AppCompatActivity() {
 
+
     private lateinit var navController: NavController
     private val isLinearLayoutManager = true
-
+    private val recyclerView = binding.recyclerView
     private fun chooseLayout() {
         if (isLinearLayoutManager) {
             recyclerView.LayoutManager = LinearLayoutManager(this)
         } else {
             recyclerView.LayoutManager = GridLayoutManager(this, 4)
-        } recyclerView.adapter = LetterAdapter()
+        }
+        recyclerView.adapter = LetterAdapter()
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
