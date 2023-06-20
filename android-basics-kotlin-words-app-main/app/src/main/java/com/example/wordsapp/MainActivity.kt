@@ -20,6 +20,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupActionBarWithNavController
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.wordsapp.databinding.ActivityMainBinding
 
 /**
@@ -29,6 +31,14 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var navController: NavController
     private val isLinearLayoutManager = true
+
+    private fun chooseLayout() {
+        if (isLinearLayoutManager) {
+            recyclerView.LayoutManager = LinearLayoutManager(this)
+        } else {
+            recyclerView.LayoutManager = GridLayoutManager(this, 4)
+        } recyclerView.adapter = LetterAdapter()
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

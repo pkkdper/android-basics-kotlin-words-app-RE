@@ -103,4 +103,5 @@ class LetterAdapter :
             info.addAction(customClick)
         }
     }
+
 }
