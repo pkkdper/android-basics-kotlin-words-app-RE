@@ -77,8 +77,9 @@ class LetterListFragment : Fragment() {
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         inflater.inflate(R.menu.layout_menu, menu)
 
-        val layoutButton = menu.findItem(R.id.action_switch_layout)
+        val layoutButton = menu?.findItem(R.id.action_switch_layout)
         setIcon(layoutButton)
+        return true
     }
 
     /**
