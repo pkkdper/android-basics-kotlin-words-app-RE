@@ -34,7 +34,7 @@ android {
     }
 
     dataBinding {
-        enabled = true
+        enabled true
     }
     buildTypes {
         release {
@@ -52,8 +52,8 @@ android {
     }
 
     buildFeatures {
-        viewBinding = true
-        dataBinding = true
+        viewBinding true
+        dataBinding true
     }
     namespace 'com.example.wordsapp'
 }
