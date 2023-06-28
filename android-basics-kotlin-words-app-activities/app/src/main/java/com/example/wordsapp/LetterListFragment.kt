@@ -19,6 +19,7 @@ class LetterListFragment : Fragment() {
     private var _binding: FragmentLetterListBinding? = null
     private val binding get() = _binding!!
     private lateinit var recyclerView: RecyclerView
+    private var isLinearLayoutManager = true
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         recyclerView = binding.recyclerView
@@ -72,20 +73,24 @@ class LetterListFragment : Fragment() {
         // else menu.icon = ContextCompat.getDrawable(this, R.drawable.ic_linear_layout)
         menuItem.icon =
             if (isLinearLayoutManager)
-                ContextCompat.getDrawable(this, R.drawable.ic_grid_layout)
-            else ContextCompat.getDrawable(this, R.drawable.ic_linear_layout)
+                ContextCompat.getDrawable(this.requireContext(), R.drawable.ic_grid_layout)
+            else ContextCompat.getDrawable(this.requireContext(), R.drawable.ic_linear_layout)
     }
 
     /**
      * Initializes the [Menu] to be used with the current [Activity]
      */
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.layout_menu, menu)
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.action_switch_layout -> {
+                isLinearLayoutManager = !isLinearLayoutManager
+                chooseLayout()
+                setIcon(item)
 
-        val layoutButton = menu?.findItem(R.id.action_switch_layout)
-        // Calls code to set the icon based on the LinearLayoutManager of the RecyclerView
-        setIcon(layoutButton)
+                return true
+            }
 
-        return true
+            else -> super.onOptionsItemSelected(item)
+        }
     }
 }
