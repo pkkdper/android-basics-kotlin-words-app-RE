@@ -28,7 +28,7 @@ class DetailActivity : AppCompatActivity() {
      * via DetailActivity.<variable> without needing to create
      * a DetailActivity instance.
      */
-l    override fun onCreate(savedInstanceState: Bundle?) {
+    override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         // Retrieve a binding object that allows you to refer to views by id name
