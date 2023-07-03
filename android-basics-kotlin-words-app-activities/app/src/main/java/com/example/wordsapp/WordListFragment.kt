@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -32,23 +33,11 @@ class WordListFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         recyclerView = binding.recyclerView
-        chooseLayout()
-        recyclerView.addItemDecoration(activity.intent)
+        recyclerView.layoutManager = LinearLayoutManager(requireContext())
+        recyclerView.adapter = WordAdapter(activity?.intent?.extras?.getString(LETTER).toString(), requireContext())
+        recyclerView.addItemDecoration(DividerItemDecoration(context, DividerItemDecoration.VERTICAL))
     }
 
-    private fun chooseLayout() {
-        when (isLinearLayoutManager) {
-            true -> {
-                recyclerView.layoutManager = LinearLayoutManager(context)
-                recyclerView.adapter = LetterAdapter()
-            }
-
-            false -> {
-                recyclerView.layoutManager = GridLayoutManager(context, 4)
-                recyclerView.adapter = LetterAdapter()
-            }
-        }
-    }
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
