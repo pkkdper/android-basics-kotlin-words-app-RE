@@ -33,6 +33,7 @@ class WordListFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         recyclerView = binding.recyclerView
         chooseLayout()
+        recyclerView.addItemDecoration(activity.intent)
     }
 
     private fun chooseLayout() {
