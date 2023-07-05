@@ -15,5 +15,9 @@
     <fragment
         android:id="@+id/wordListFragment"
         android:name="com.example.wordsapp.WordListFragment"
-        android:label="WordListFragment" />
+        android:label="WordListFragment" >
+        <argument
+            android:name="letter"
+            app:argType="string" />
+    </fragment>
 </navigation>
