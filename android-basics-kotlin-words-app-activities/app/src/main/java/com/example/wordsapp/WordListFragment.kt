@@ -19,8 +19,9 @@ class WordListFragment : Fragment() {
     }
     private var _binding: FragmentLetterListBinding? = null
     private val binding get() = _binding!!
-    private var isLinearLayoutManager = true
+//    private var isLinearLayoutManager = true
     private lateinit var recyclerView: RecyclerView
+    private lateinit var letterId: String
 
     override fun onCreateView(
         inflater: LayoutInflater,
