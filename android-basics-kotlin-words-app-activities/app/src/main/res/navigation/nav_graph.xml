@@ -7,7 +7,11 @@
     <fragment
         android:id="@+id/letterListFragment"
         android:name="com.example.wordsapp.LetterListFragment"
-        android:label="LetterListFragment" />
+        android:label="LetterListFragment" >
+        <action
+            android:id="@+id/action_letterListFragment_to_wordListFragment"
+            app:destination="@id/wordListFragment" />
+    </fragment>
     <fragment
         android:id="@+id/wordListFragment"
         android:name="com.example.wordsapp.WordListFragment"
