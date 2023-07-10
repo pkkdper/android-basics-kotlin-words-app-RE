@@ -13,5 +13,4 @@ class NavigationTests {
         )
     }
 
-    val letterListScenario = launchFragmentInContainer<LetterListFragment>(themeResId = )
 }
