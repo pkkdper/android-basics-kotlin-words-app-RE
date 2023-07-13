@@ -12,6 +12,8 @@ class NavigationTests {
         val navController = TestNavHostController(
             ApplicationProvider.getApplicationContext()
         )
+        val letterListScenario = launchFragmentInContainer<LetterListFragment>(themeResId =
+        R.style.Theme_Words)
         letterListScenario.onFragment { fragment ->
 
             navController.setGraph(R.navigation.nav_graph)
