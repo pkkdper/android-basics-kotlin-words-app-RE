@@ -1,6 +1,7 @@
 package com.example.wordsapp
 
 import androidx.fragment.app.testing.launchFragmentInContainer
+import androidx.navigation.Navigation
 import androidx.navigation.testing.TestNavHostController
 import androidx.test.core.app.ApplicationProvider
 import org.junit.Test
@@ -11,6 +12,12 @@ class NavigationTests {
         val navController = TestNavHostController(
             ApplicationProvider.getApplicationContext()
         )
+        letterListScenario.onFragment { fragment ->
+
+            navController.setGraph(R.navigation.nav_graph)
+
+            Navigation.setViewNavController(fragment.requireView(), navController)
+        }
     }
 
 }
