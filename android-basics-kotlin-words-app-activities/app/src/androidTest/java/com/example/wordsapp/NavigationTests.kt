@@ -29,6 +29,8 @@ class NavigationTests {
             .perform(
                 RecyclerViewActions
                 .actionOnItemAtPosition<RecyclerView.ViewHolder>(2, click()))
+        assertEquals(navController.currentDestination?.id, R.id.wordListFragment)
+
     }
 
 }
